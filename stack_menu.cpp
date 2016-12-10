@@ -76,6 +76,7 @@ int main() {
 	case 4: exit(0);
 			break;
 	default: cout<< "Try again!";
+		        break;
   }
   getch();
   system("cls");
