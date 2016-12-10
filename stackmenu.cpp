@@ -64,7 +64,6 @@ int main() {
   	case 1: cout <<"Input Number : ";
   			cin >> x;
   			s -> push(x);
-  			s -> display();
   			cout <<"press any key" << endl;
   			break;
   			
