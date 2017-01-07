@@ -31,7 +31,6 @@ void search(int num) {
     n = n -> next;
     c++;
   }
-  
 }
 
 void append(int num) {
@@ -112,26 +111,16 @@ int ddelete(int num) {
 }
 
 int delAll(int num) {
-  struct node * temp, * prev;
-  temp = head;
-  while (temp != NULL) {
-    if (temp -> data == num) {
-      if (temp == head) {
-        head = temp -> next;
-        free(temp);
-        return 1;
-      } else {
-        prev -> next = temp -> next;
-        free(temp);
-        return 1;
-      }
-    } else {
-      prev = temp;
-      temp = temp -> next;
-    }
+  struct node * n;
+  int c = 1;
+  n = head;
+  
+  while (n != NULL) {
+  	ddelete(num);
+    n = n -> next;
+    c++;
   }
-  return 0;
-}
+} 
 
 void insert(int num) {
   int c = 0;
@@ -239,7 +228,10 @@ int main() {
     		addafter(num, loc);
     		break;
     	case 7:
-    		cout << endl;
+    		int x;
+    		cout << "Enter number you want to delete : ";
+    		cin >> num;
+    		delAll(num);
     		break;
       case 8:
         return 0;
