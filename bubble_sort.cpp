@@ -11,15 +11,17 @@ int main() {
 				int swap = A[j];
 				A[j] = A[j+1];
 				A[j+1] = swap;
-				cout << "Pass "<< x++ << " is: ";
-				
-				for(int i=0; i<n; i++) {
-					cout << A[i] << " ";
-				}
-				cout << "Swapped: " << A[j] << "," << A[j+1];
-				cout << endl;
 			}
 		}
+			cout << "Pass "<< x++ << " is: ";
+				
+				for(int k=0; k<n; k++) {
+					cout << A[k] << " ";
+				}
+				for(int l=0; l<1; l++) {
+						cout << "Swapped: " << A[l] << "," << A[l+1];
+				}
+				cout << endl;
 	}
 	return 0;
 }
